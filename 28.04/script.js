@@ -9,7 +9,7 @@ function generateMovieCard(movieData) {
         <div class="card-body-up">
             <div class="card-img"><img src="${movieData.Poster}" alt=""></div>
             <div class="card-items">
-            <h2>${movieData.Title}</h2>
+            <h3>${movieData.Title}</h3>
             <h5><i class="fa-solid fa-star" style="color: #ffb92a;"></i>   ${movieData.imdbRating}</h5>
             <p>${movieData.Rated}</p>
             <p>${movieData.Year}</p>
