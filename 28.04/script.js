@@ -15,8 +15,8 @@ function generateMovieCard(movieData) {
             <p>${movieData.Year}</p>
             <p>${movieData.Metascore}</p>
             <div class="btns">${movieData.Genre.split(',').map(genre => {
-              return `<span class="btn">${genre.trim()}</span>`
-            }).join('  ')}
+    return `<span class="btn">${genre.trim()}</span>`
+  }).join('  ')}
            
 
             </div>
@@ -36,11 +36,12 @@ searchButton.addEventListener("click", function () {
   let movieTitle = movieTitleInput.value;
   let apiUrl = "http://www.omdbapi.com/?t=" + movieTitle + "&apikey=27958444";
   axios.get(apiUrl)
-      .then(function (res) {
-          var movieCardHtml = generateMovieCard(res.data);
-          movieResults.innerHTML = movieCardHtml;
-          movieTitleInput.value = "";        })
-    });
+    .then(function (res) {
+      var movieCardHtml = generateMovieCard(res.data);
+      movieResults.innerHTML = movieCardHtml;
+      movieTitleInput.value = "";
+    })
+});
 
 
-    
+
